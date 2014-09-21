@@ -1,0 +1,9 @@
+<% content_for(:title, "#{@lesson.name.upcase} | LessonPlan") %>
+
+<h1>Viewing <%= @lesson.name.capitalize %></h1>
+
+<p>Name: <%= @lesson.name%></p>
+<p>Content: <%= @lesson.content%></p>
+<p><%= link_to 'Edit', "/lessons/#{@lesson.id}/edit" %></p>
+<p><%= link_to 'Delete', "/lessons/#{@lesson.id}", method: :delete %></p>
+<p><%= link_to 'Lessons', '/lessons' %></p>

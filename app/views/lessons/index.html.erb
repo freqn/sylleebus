@@ -1,0 +1,11 @@
+<% content_for(:title, "LessonPlan") %>
+<h1>Table of Contents</h1>
+
+<div class="lessons">
+  <ul>
+    <% @lessons.each do |lesson| %>
+      <li><%= link_to lesson.name, "/lessons/#{lesson.id}" %> | <%= link_to "edit", "/lessons/#{lesson.id}/edit" %>  | <%= link_to 'delete', "/lessons/#{lesson.id}", method: :delete %> </li>
+    <%end%>
+  </ul>
+<p><%= link_to '+', '/lessons/new', style: "text-decoration:none;font-size:2em;" %></p>
+</div>
